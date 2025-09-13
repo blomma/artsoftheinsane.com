@@ -6,7 +6,10 @@ layout: default
     <article class="blog-post">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2 class="blog-post-title">{{ page.title | upcase }}</h2>
+                <h2 class="blog-post-title">
+                    {{ page.title | upcase }} {{ page.date | date: "%B %-d, %Y"
+                    }}
+                </h2>
                 <div class="blog-post-content">{{ content }}</div>
             </div>
         </div>
