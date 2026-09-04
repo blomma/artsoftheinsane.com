@@ -1,50 +1,87 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mikael Hultgren — artsoftheinsane</title>
+    <meta
+      name="description"
+      content="Mikael Hultgren is a coder, baker and climber."
+    />
+    <meta name="author" content="Mikael Hultgren" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://artsoftheinsane.com/" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
 
-<section id="articles">
-    <div class="container">
-        {% for post in paginator.posts %} {% if post.hero == true %}
-        <div class="hero">{{ post.content }}</div>
-        {% else %}
-        <article class="blog-post">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <h2 class="blog-post-title">
-                        <a href="{{ post.url }}">{{ post.title | upcase }}</a>
-                    </h2>
-                    <div class="blog-post-content">{{ post.content }}</div>
-                </div>
-            </div>
-        </article>
-        {% endif %} {% endfor %}
-    </div>
-</section>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-{% if paginator.total_pages > 1 %}
-<nav>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-8">
-                <ul class="nav-center">
-                    {% if paginator.previous_page %}
-                    <li>
-                        <a
-                            href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-                            >&laquo; Newer</a
-                        >
-                    </li>
-                    {% endif %} {% if paginator.next_page %}
-                    <li>
-                        <a
-                            href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-                            >Older &raquo;</a
-                        >
-                    </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </div>
-    </div>
-</nav>
-{% endif %}
+    <main id="main" class="page" tabindex="-1">
+      <header class="intro">
+        <p class="site-name">artsoftheinsane.com</p>
+        <h1>Mikael Hultgren</h1>
+        <p class="lede">
+          I’m a coder, baker and climber. By day I code for a living and by
+          night I rekindle my love of coding.
+        </p>
+      </header>
+
+      <div class="link-groups">
+        <nav class="link-group" aria-labelledby="built-title">
+          <h2 id="built-title">Things I built</h2>
+          <ul role="list">
+            <li>
+              <a href="https://vilar.artsoftheinsane.com/">
+                <span>Vilar</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://timelyquotes.artsoftheinsane.com/">
+                <span>Timely Quotes</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://literature.artsoftheinsane.com">
+                <span>Literature quotes</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="link-group" aria-labelledby="places-title">
+          <h2 id="places-title">Places to find out more about me</h2>
+          <ul role="list">
+            <li>
+              <a href="https://github.com/blomma">
+                <span>GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://cv.artsoftheinsane.com">
+                <span>Résumé</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/mikael-hultgren-394a9a1a/">
+                <span>LinkedIn</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        All content © <time datetime="2026">2026</time>
+        <a href="mailto:blomma@artsoftheinsane.com"
+          >blomma@artsoftheinsane.com</a
+        >
+        <span class="site-credit"
+          ><span aria-hidden="true">/</span> artsoftheinsane.com</span
+        >
+      </p>
+    </footer>
+  </body>
+</html>

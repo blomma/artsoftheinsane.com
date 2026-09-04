@@ -1,4 +1,8 @@
-_drafts
-_site
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+
+# macOS
 .DS_Store
-node_modules
